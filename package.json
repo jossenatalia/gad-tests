@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky",
-    "lint": "eslint . --ignore-pattern eslint.config.mjs"
+    "lint": "eslint . --ignore-pattern eslint.config.mjs",
+    "test": "npx playwright test",
+    "test:headed": "npm run test -- --headed",
+    "test:ui": "npm run test -- --ui",
+    "show-report": "npx playwright show-report",
+    "format:check": "npx prettier . --check \"!**.ts\""
   },
   "keywords": [],
   "author": "",
