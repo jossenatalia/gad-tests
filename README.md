@@ -16,7 +16,6 @@ Follow instructions in app README
 
 ### Installation and setup
 
-- (optional) install VSC recommended plugins
 - install dependencies: `npm install`
 - setup Playwright with: `npx playwright install --with-deps chromium`
 - setup husky with: `npx husky`
@@ -27,6 +26,18 @@ Run all tests:
 
 ```
 npx playwright test
+```
+
+Fix husky issues:
+
+```
+npx eslint . --fix
+```
+
+Checking issues with TypeScript Compiler:
+
+```
+npx tsc --noEmit --pretty --strict
 ```
 
 For more usage cases look in `package.json` scripts section.
