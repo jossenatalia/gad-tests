@@ -1,6 +1,7 @@
 import {HomePage} from "../../pages/home.page";
 import {expect, test} from "@playwright/test";
 import {ArticlesPage} from "../../pages/articles.pages";
+import {CommentsPages} from "../../pages/comments.pages";
 
 test.describe('Verify service main pages', () => {
     test('home page title', {
@@ -27,5 +28,18 @@ test.describe('Verify service main pages', () => {
             // Assert
             const title = await articlesPage.title();
             expect(title).toContain('Articles');
+        });
+
+    test('comments page title', {
+            tag: '@GAD',
+        },
+        async ({page}) => {
+            // Arrange
+            const commentsPage = new CommentsPages(page);
+            // Act
+            await commentsPage.goto();
+            // Assert
+            const title = await commentsPage.title();
+            expect(title).toContain('Comments');
         })
 });
