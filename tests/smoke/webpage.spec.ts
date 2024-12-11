@@ -1,7 +1,7 @@
-import {HomePage} from "../../pages/home.page";
+import {HomePage} from "../../src/pages/home.page";
 import {expect, test} from "@playwright/test";
-import {ArticlesPage} from "../../pages/articles.pages";
-import {CommentsPages} from "../../pages/comments.pages";
+import {ArticlesPage} from "../../src/pages/articles.pages";
+import {CommentsPages} from "../../src/pages/comments.pages";
 
 test.describe('Verify service main pages', () => {
     test('home page title', {
